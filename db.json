@@ -76,7 +76,7 @@
       "runtime": "115",
       "capacity": 40,
       "showtime": "08:30PM",
-      "tickets_sold": 32,
+      "tickets_sold": 40,
       "description": "On an isolated island, a small group of people are terrorized by giant voracious shrews in the midst of a hurricane.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/1466/p1466_v_v8_ab.jpg"
     },
@@ -127,7 +127,7 @@
       "runtime": "100",
       "capacity": 40,
       "showtime": "09:00PM",
-      "tickets_sold": 31,
+      "tickets_sold": 40,
       "description": "A stock car driver goes undercover as the wheel man for a motorcycle gang.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/45367/p45367_v_v8_aa.jpg"
     },
@@ -147,7 +147,7 @@
       "runtime": "98",
       "capacity": 50,
       "showtime": "04:45PM",
-      "tickets_sold": 33,
+      "tickets_sold": 35,
       "description": "Delinquent teen-agers ingest a substance and grow thirty feet tall, then proceed to take over a small town.",
       "poster": "https://www.gstatic.com/tv/thumb/v22vodart/37991/p37991_v_v8_aa.jpg"
     }

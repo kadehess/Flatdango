@@ -1,8 +1,9 @@
+
 const url = "http://localhost:3000/films"
-const filmsBoxLeftSide = document.querySelector("#films")
-const filmsTitlesLeftSide = filmsBoxLeftSide.children[1]
-filmsTitlesLeftSide.innerText = ""
-filmsBoxLeftSide.children[0].innerText = ""
+const filmsBox = document.querySelector("#films")
+const filmsList = filmsBox.children[1]
+filmsList.innerText = ""
+filmsBox.children[0].innerText = ""
 
 const filmPoster = document.querySelector("img#poster")
 const filmTitle = document.querySelector("div#title.title")
@@ -15,6 +16,7 @@ const buyTicketButton = document.querySelector("div.ui.orange.button")
 
 let filmGlo = {}
 let divLI = {}
+
 
 function fetchFilms(){
     return fetch(url)
@@ -29,11 +31,16 @@ fetchFilms().then(filmsObj => {
     })
 })
 
+
+
+
+
 function turnFilmObjToHTML(filmObj){
     let titleLI = document.createElement('li')
     titleLI.classList.add("film_title")
     titleLI.innerText = filmObj.title
-    filmsTitlesLeftSide.append(titleLI)
+    filmsList.append(titleLI)
+
 
     divLI = titleLI
     changeColor(titleLI)
@@ -59,7 +66,6 @@ function changeColor(ele){
 
 
 function movieDetails(singleObj){
-
     filmGlo = singleObj
  
     filmPoster.src = singleObj.poster
@@ -91,7 +97,6 @@ function buyTicket(){
                 filmGlo.tickets_sold = updatedfilm.tickets_sold
                 filmTicketNum.innerText = Number(updatedfilm.capacity) - updatedfilm.tickets_sold
 
-                // soldOut()
             })
          } 
     })
@@ -106,12 +111,3 @@ function soldOut(){
         currentButton.innerText = "SOLD OUT"
     }
 }
-function buyTickets(numOfTickets){
-     numOfTickets -= 1
-     if(numOfTickets > 0) {
-         return numOfTickets + " remaining tickets "
-     }
-     else {
-         return "sold out"
-     }
- }
